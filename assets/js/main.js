@@ -104,7 +104,7 @@
 					overlayOpacity: 0.85,
 					popupCloserText: '',
 					popupLoaderText: '',
-					selector: '.work-item a.image',
+					selector: '.work-item a.image:not([data-embed])', // Exclude links with data-embed attribute
 					usePopupCaption: true,
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: false,
@@ -113,5 +113,32 @@
 				});
 
 			});
+		
+		// Function to open modal with the correct embed link
+			document.querySelectorAll('.image.fit.thumb').forEach(item => {
+				item.addEventListener('click', function(e) {
+					e.preventDefault();
+					// Get the embed URL from the data-embed attribute
+					var embedUrl = this.getAttribute('data-embed');
+					// Set the iframe src to the clicked item's embed link
+					document.getElementById('canva-iframe').src = embedUrl;
+					// Show the modal and overlay
+					document.getElementById('embed-modal').style.display = 'block';
+					document.getElementById('modal-overlay').style.display = 'block';
+				});
+			});
 
+		// Close modal
+			document.getElementById('close-modal').addEventListener('click', function() {
+				document.getElementById('embed-modal').style.display = 'none';
+				document.getElementById('modal-overlay').style.display = 'none';
+				document.getElementById('canva-iframe').src = ""; // Clear iframe content when closed
+			});
+
+			document.getElementById('modal-overlay').addEventListener('click', function() {
+				document.getElementById('embed-modal').style.display = 'none';
+				document.getElementById('modal-overlay').style.display = 'none';
+				document.getElementById('canva-iframe').src = ""; // Clear iframe content when closed
+			});
+	
 })(jQuery);
