@@ -2545,6 +2545,40 @@ input, select, textarea {
 			cursor: default;
 		}
 
+/* Styling the 'open-excel' button 18/10/2024 */
+	.open-excel {
+	    background-color: transparent; /* Transparent background */
+	    color: #787878; /* Initial text color */
+	    padding: 5px; /* Padding for button */
+	    border: none; /* Remove default borders */
+	    border-radius: 5px; /* Rounded corners */
+	    font-size: 12px; /* Adjust font size */
+	    cursor: pointer; /* Show pointer on hover */
+	    text-align: left;
+	    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+	}
+	
+	.open-excel a {
+	    color: inherit; /* Inherit the text color from the parent */
+	    text-decoration: none; /* Remove underline from link */
+	}
+	
+	.open-excel:hover {
+	    background-color: #1f1815; /* Dark background on hover */
+	}
+	
+	.open-excel:hover a {
+	    color: white; /* Ensure the link text stays white on hover */
+	}
+
+/* For mobile responsiveness */
+	@media screen and (max-width: 768px) {
+	    .open-excel {
+	        font-size: 12px; /* Adjust font size for smaller screens */
+	        padding: 8px 15px; /* Adjust padding for smaller screens */
+	    }
+	}
+
 /* Work Item */
 
 	.work-item {
