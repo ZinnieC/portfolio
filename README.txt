@@ -1,3 +1,9 @@
+This is to give credit to the origin of the code which this portfolio project was edited from. The author's readme text is as
+presented below:
+
+
+### The original README text ### 
+
 Strata by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
