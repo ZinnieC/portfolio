@@ -1,3 +1,9 @@
+This is to give credit to the origin of the code which this portfolio project was edited from. The author's LICESNSE text is as
+presented below:
+
+
+### ORIGINAL LICENSE ### 
+
 Creative Commons Attribution 3.0 Unported
 http://creativecommons.org/licenses/by/3.0/
 
